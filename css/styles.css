@@ -1,0 +1,476 @@
+/*
+Custom Css
+Asher Alley
+*/
+
+/*Layout
+-----------------------------------------*/
+
+html {
+	background: url(../images/interstellar-bg-600alt.jpg) no-repeat center center fixed;
+	background-size: cover;
+}
+
+body {
+	background-color: transparent;
+	margin: 0;
+	color: #eeeeee;
+}
+
+a {
+	list-style: none;
+	text-decoration: none;
+	color: white;
+
+}
+
+a:visted {
+	list-style: none;
+	text-decoration: none;
+} 
+
+.title h1 {
+	font-family: Times, serif;
+	font-weight: normal;
+	font-size: 2.1em;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 0;
+	border-bottom: 1px solid #EEEEEE;
+}
+
+.director {								/*this needs some serious attention*/
+	margin: .3em;
+	text-align: center;
+}
+
+
+
+/*Navigation
+------------------------------------------*/
+
+nav {
+	margin-top: 1em;
+	padding: 0;
+	background: rgba(85,85,85,0.7);
+	height: 100%;
+	text-align: right;
+	font-family: 'Source Code Pro', sans-serif; 
+	font-size: 1.4em;
+	color: #EEEEEE;
+	text-transform: uppercase;
+}
+
+nav ul {
+		width: 100%;
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 0;
+		list-style: none;
+    	text-align: left;  
+}
+
+nav ul li {
+	border-top: 2px solid #333333;
+	padding: .3em 0 .4em 2em;
+}
+
+.show {}
+
+
+/* Hmburger Menu
+------------------------------------------*/
+
+.hamburger {
+	width: 40px;
+	color: #EEEEEE;
+	height: 40px;
+	margin: 0.5em;
+	border: 2px solid #EEEEEE;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+/* Top bar animation
+---------------------------------*/
+
+@keyframes top-to-arrow {
+	0% {
+		width: 100%;
+		transform: rotate(0deg) translate(0px);
+	}
+	100% {
+		width: 40%;
+		transform: rotate(-45deg) translate(-4px);
+	}
+}
+
+.tp-to-arrow {
+	animation: top-to-arrow 0.2s forwards;
+	transform-origin: 65% 50%;
+}
+
+@keyframes top-to-burger {
+	0% {
+		transform: rotate(-45deg);
+		width: 40%;
+	}
+	
+	50% {
+		width: 100%;
+	}
+
+	100% {
+		transform: rotate(0deg);
+		width: 100%;
+	}
+}
+
+.tp-to-burger {
+	animation: top-to-burger 0.2s backwards;
+	transform-origin: 50% 50%;
+}
+
+/* Mid bar animation
+---------------------------------*/
+
+@keyframes mid-to-arrow {
+	0% {
+		width: 100%;
+		transform: translate(0px);
+	}
+	100%{
+		width: 65%;
+		transform: translate(15px);
+	}
+}
+
+.md-to-arrow {
+	animation: mid-to-arrow 0.2s forwards;
+	transform-origin: 20% 50%;
+}
+
+@keyframes mid-to-burger {
+	0% {
+		transform: translate(15px);
+		width: 65%;
+	}
+	100% {
+		transform: translate(0px);
+		width: 100%;
+	}
+}
+
+.md-to-burger {
+	animation: mid-to-burger 0.2s backwards;
+	transform-origin: 20% 50%;
+}
+
+/* bottom bar animation
+---------------------------------*/
+
+@keyframes bottom-to-arrow {
+	0% {
+		transform: rotate(0deg) translate(0px);
+		width: 100%;
+
+	}
+	100% {
+		transform: rotate(45deg) translate(-4px);
+		width: 40%;
+	}
+}
+
+.bt-to-arrow {
+	animation: bottom-to-arrow 0.2s forwards;
+	transform-origin: 65% 50%;
+}
+
+@keyframes bottom-to-burger {
+	0% {
+		transform: rotate(45deg);
+		width: 50%;
+	}
+	
+	50% {
+		width: 100%;
+	}
+
+	100% {
+		transform: rotate(0deg);
+		width: 100%;
+	}
+}
+
+.bt-to-burger {
+	animation: bottom-to-burger 0.2s backwards;
+	transform-origin: 50% 50%;
+}
+
+/* Content
+-----------------------------------------*/
+
+.content {
+	text-align: center;
+	font-size: 1.3em;
+  	margin: auto;
+  	position: absolute;
+  	top: 0; left: 0; bottom: 85px; right: 0;
+  	height: 124px;
+}
+
+
+/* Modal
+------------------------------------------*/
+
+.over-lay,
+.over-lay-gallery,
+.over-lay-story {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	background: rgba(0,0,0,0.5);
+}
+
+
+.light-box-trailer {
+	width: 88%;
+	margin: 0 auto;
+	position: relative;
+}
+
+.light-box-story {
+	width: 88%;
+	height: 71%;
+	font-size: 15px;
+	text-align: justify;
+	font-family: 'Source Code Pro', sans-serif;
+	margin: 0 auto;
+	background: rgba(85,85,85,0.5);
+	overflow: auto;
+}
+
+.scrollable {
+	padding: 10px;
+}
+
+
+.spacer-t {
+	height: 22%;
+}
+
+.spacer-s {
+	height: 18%;
+}
+
+/*.spacer-g {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+}*/
+
+.light-box-gallery {
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+  	align-items: center;
+}
+
+
+iframe {
+  	max-width: 100%;
+}
+
+/* modal close buttons
+----------------------------------------------*/
+
+.close-story {
+	text-align: right;
+	width: 88%;
+	margin: 0 auto;
+	background: rgba(85,85,85,0.5);
+}
+
+.hides {
+	font-size: 2em;
+	margin: 0.5em;
+	cursor: pointer;
+}
+
+.close-trailer {
+	text-align: right;
+	width: 88%;
+	margin: 0 auto;
+}
+
+.hidet {
+	font-size: 2em;
+	margin: 0.5em;
+	cursor: pointer;
+}
+
+.close-gallery {
+	text-align: right;
+	width: 100%;
+	margin: 0 auto;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+	background: none;
+}
+
+.hideg {
+	font-size: 2em;
+	margin: 0.2em;
+	cursor: pointer;
+}
+
+.accessibly-hidden {
+	position: absolute;
+	left: -999em;
+}
+
+/*SM buttons
+----------------------------------------------*/
+
+footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+
+.footer-upper {
+	width: 100%;
+	text-align: center;
+	color: #eeeeee;
+	background: rgba(85,85,85,0.5);
+}
+
+.footer-lower {
+	background: rgba(85,85,85,0.9);
+	color: #eeeeee;
+	display: block;
+	width: 100%;
+}
+
+.sm-buttons {
+	list-style: none;
+	padding: 0;
+	width: 75%;
+	max-width: 300px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+}
+
+.sm-buttons li {
+	font-size: 3em;
+	cursor: pointer;
+}
+
+.sm-reveal{
+	display: inline-block;
+	font-size: 45px;
+	margin: 0 auto;
+	padding: 0 0.3em;
+	cursor: pointer;
+}
+
+.disc-reveal {
+	font-size: 45px;
+	cursor: pointer;
+	margin-right: 0.5em;
+}
+
+@keyframes spin {
+	100% {
+		transform: rotate(180deg);
+	}
+}
+
+.sm-rotate {
+	animation: spin .2s forwards;
+	transform-origin: 50% 50%;
+}
+
+
+/* Media queries
+----------------------------------------------*/
+
+@media screen and (min-width: 600px){
+
+	html {
+		background: url(../images/interstellar-bg.jpg) no-repeat center center fixed;
+		background-size: cover;
+	}
+
+	.hamburger {
+		margin-left: 1.7em;
+	}
+	.nav-pane {
+		position: fixed;
+		left: 101px;
+		top: 0;
+		width: 30%;
+		height: 100%;
+		background: none;
+		margin-top: 0;
+		border-left: 1px solid #EEEEEE;
+	}
+
+	nav ul {
+		width: 100%;
+		max-width: 960px;
+		margin: 50% auto;
+		border-top: 0;
+	}
+	
+	nav ul li {
+		margin-right: 0.5em;
+		border-top: 0;
+	} 
+
+	nav ul li a {
+		border-bottom: 0;
+	}
+
+	.spacer-t {
+		height: 10%;
+	}
+
+	iframe {
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.light-box-trailer {
+		padding: 0;
+		width: 62%;
+	}
+
+	.close-trailer {
+		width: 47%;
+	}
+
+
+
+} /* end of media query*/
+
+@media screen and (min-width: 800px) {
+	
+	.title h1 {
+		font-size: 3.1em;
+		letter-spacing: 17px;
+		} 
+} 
+
